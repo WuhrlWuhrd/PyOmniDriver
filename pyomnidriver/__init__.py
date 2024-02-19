@@ -17,9 +17,6 @@ jpype.imports.registerDomain("com.oceanoptics")
 
 def load(jvmPath=None):
 
-    if jpype.isJVMStarted() and (os.path.join(path, "OO.jar") not in jpype.getClassPath()):
-        jpype.shutdownJVM()
-
     if not jpype.isJVMStarted():
 
         complete = ""
