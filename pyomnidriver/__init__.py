@@ -32,8 +32,10 @@ def load(jvmPath=None):
 
             if os.path.exists(linux):
                 complete = linux
+                
             elif os.path.exists(win):
                 complete = win
+                
             elif os.path.exists(mac):
                 complete = mac
 
