@@ -23,10 +23,12 @@ def load(jvmPath=None):
 
         if jvmPath is None:
             complete = jpype.getDefaultJVMPath()
+            
         else:
+            
             linux = os.path.join(jvmPath, "lib", "server", "libjvm.so")
-            win = os.path.join(jvmPath, "bin", "server", "jvm.dll")
-            mac = os.path.join(jvmPath, "lib", "server", "libjvm.dylib")
+            win   = os.path.join(jvmPath, "bin", "server", "jvm.dll")
+            mac   = os.path.join(jvmPath, "lib", "server", "libjvm.dylib")
 
             if os.path.exists(linux):
                 complete = linux
@@ -34,6 +36,7 @@ def load(jvmPath=None):
                 complete = win
             elif os.path.exists(mac):
                 complete = mac
+
 
         # Start the JVM
         jpype.startJVM(jvmpath=complete, convertStrings=True)
