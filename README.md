@@ -6,6 +6,8 @@ To install, you first need to make sure you have a Java runtime environment inst
 
 You will also need to have git installed. If not, then you can find the installer here: [https://git-scm.com/downloads](https://git-scm.com/downloads)
 
+If you are running this on Windows, then because Windows needs a separate driver installed for each USB device, to use libUSB you need to install the generic libusb-win32 driver and register it to your device so that it "claims" it and allows libUSB access to it. This is most easily done by using Zadig: [https://zadig.akeo.ie/](https://zadig.akeo.ie/). Download it, run it with your spectrometer plugged in, select your spectrometer as the device and get it to install/reinstall the WinUSB driver for it.
+
 Then, you can install this package by using PIP:
 
 ```
