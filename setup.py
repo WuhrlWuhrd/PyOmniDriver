@@ -8,7 +8,7 @@ setup(
     author='William Wood',
     author_email='waw31@cam.ac.uk',
     license='unlicense',
-    packages=['pyjisa'],
+    packages=['pyomnidriver'],
     install_requires=['jpype1'],
     include_package_data=True,
     zip_safe=False
