@@ -17,8 +17,11 @@ pip install git+https://github.com/WuhrlWuhrd/PyOmniDriver.git
 after which you should be able to import the `pyomnidriver` package and load the interface, after which you should be able to import the various OmniDriver classes, like so:
 
 ```python
-# Import the python wrapper and start it up
-import pyomnidriver; pyomnidriver.load();
+# Import the package
+import pyomnidriver;
+
+# We need to call this to startup Java
+pyomnidriver.load();
 
 # Now we should be able to import the OmniDriver Java classes as if they were Python classes
 from com.oceanoptics.omnidriver.spectrometer.usb650 import USB650
@@ -41,4 +44,14 @@ plt.show()
 
 # Close the connection now we're done
 spectrometer.close()
+```
+
+If you are running this with along side [JISA](https://github.com/OE-FET/JISA) by useing [PyJISA](https://github.com/OE-FET/PyJISA), then because they both use Java, import both before only calling `pyjisa.load()` like so:
+
+```python
+import pyjisa
+import pyomnidriver
+
+# This will load everything together, no need to call pyomnidriver.load()
+pyjisa.load()
 ```
