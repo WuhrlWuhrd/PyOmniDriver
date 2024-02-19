@@ -1,10 +1,10 @@
 # Python OO Modified Omnidriver
 
-This module wraps around a modified compilation of the OO Java OmniDriver, making use of libUSB instead of custom USB drivers, thus allowing it to run on modern operating systems.
+This module wraps around a modified recompilation of the OO Java OmniDriver, rewritten to make use of generic USB interfaces (through libUSB) instead of the custom USB drivers it previously used, thus allowing it to run on modern operating systems.
 
-To install, you first need to make sure you have a Java runtime environment installed, at least version 11. If not, you can find installers here: [https://adoptium.net/en-GB/temurin/releases/?version=11](https://adoptium.net/en-GB/temurin/releases/?version=11).
+To install, you first need to make sure you have a Java Runtime Environment, JRE, (or Java Development Kit, JDK) installed of at least version 11. You can find installers here for Windows and Mac: [https://adoptium.net/en-GB/temurin/releases/?version=11](https://adoptium.net/en-GB/temurin/releases/?version=11). For linux, use your package manager (i.e. `sudo apt install openjdk-jdk-11` or some such).
 
-You will also need to have git installed. If not, then you can find the installer here: [https://git-scm.com/downloads](https://git-scm.com/downloads)
+You will also need to have git installed. If not, then you can find the installer here: [https://git-scm.com/downloads](https://git-scm.com/downloads) (again on linux, use something like `sudo apt install git` if it's not already installed).
 
 If you are running this on Windows, then because Windows needs a separate driver installed for each USB device, to use libUSB you need to install the generic libusb-win32 driver and register it to your device so that it "claims" it and allows libUSB access to it. This is most easily done by using Zadig: [https://zadig.akeo.ie/](https://zadig.akeo.ie/). Download it, run it with your spectrometer plugged in, select your spectrometer as the device and get it to install/reinstall the WinUSB driver for it.
 
